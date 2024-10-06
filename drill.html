@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill Options | ShareNest</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Chatbot Script -->
+    <script> 
+        window.chtlConfig = { chatbotId: "1199889991" }; 
+    </script>
+    <script async data-id="1199889991" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <img src="https://i.ibb.co/z7pcCBw/logo.jpg" alt="Company Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="product-details">
+            <h1>Drill</h1>
+            <img src="https://i.ibb.co/MSR1y33/images-q-tbn-ANd9-Gc-Rs-Kda-Im-WPp-YFcc-It-U-tw-CCa2-I3-Jz-7j-Mbp-Q-s.jpg" alt="Hammer" class="product-image">
+
+            <div class="options">
+                <button class="option-button" id="buyBtn">Buy</button>
+                <button class="option-button" id="sellBtn">Sell</button>
+                <button class="option-button" id="rentBtn">Rent</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links" id="contact">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.instagram.com/yourusername" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/yourusername" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://wa.me/yourphonenumber" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/yourusername" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+        <p>© 2024 ShareNest. All rights reserved.</p>
+    </footer>
+
+    <!-- Chat Modal -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>AI Assistant</h2>
+            <p id="chatAction">How can I help you with your selection?</p>
+            <div class="chat-window">
+                <!-- Chatbot is automatically embedded here by the Chatling script -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to trigger the chatbot -->
+    <script>
+        // Get the modal element
+        var modal = document.getElementById("chatModal");
+        var span = document.getElementById("closeModal");
+
+        // Attach event listeners to buttons to open the modal
+        document.getElementById('buyBtn').addEventListener('click', function() {
+            document.getElementById('chatAction').innerText = 'You chose to Buy a Drill.';
+            modal.style.display = "block";
+        });
+
+        document.getElementById('sellBtn').addEventListener('click', function() {
+            document.getElementById('chatAction').innerText = 'You chose to Sell a Drill.';
+            modal.style.display = "block";
+        });
+
+        document.getElementById('rentBtn').addEventListener('click', function() {
+            document.getElementById('chatAction').innerText = 'You chose to Rent a Drill.';
+            modal.style.display = "block";
+        });
+
+        // Close the modal when the user clicks the close button
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal when the user clicks anywhere outside the modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
